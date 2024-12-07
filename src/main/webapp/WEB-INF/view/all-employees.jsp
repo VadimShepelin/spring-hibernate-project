@@ -35,6 +35,9 @@
             <td>${emp.surname}</td>
             <td>${emp.department}</td>
             <td>${emp.salary}</td>
+            <td>
+                <input type="button" value="Update" onclick="window.location.href = '${updateButton}'"/>
+            </td>
         </tr>
     </c:forEach>
 

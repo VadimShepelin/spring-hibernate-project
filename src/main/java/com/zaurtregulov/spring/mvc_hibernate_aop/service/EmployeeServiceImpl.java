@@ -25,8 +25,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public String updateEmployee() {
-        return "";
+    @Transactional
+    public Employee getEmployee(int id) {
+        return employeeDao.getEmployee(id);
     }
 
     @Autowired

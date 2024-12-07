@@ -31,11 +31,14 @@ public class EmployeeDaoImpl implements EmployeeDao{
     @Override
     public void saveEmployee(Employee employee) {
         Session currentSession = sessionFactory.getCurrentSession();
-        currentSession.save(employee);
+        currentSession.saveOrUpdate(employee);
     }
 
     @Override
-    public String updateEmployee(){
+    public Employee getEmployee(int id) {
+        Session currentSession = sessionFactory.getCurrentSession();
 
+        Employee employee = currentSession.get(Employee.class, id);
+        return employee;
     }
 }
