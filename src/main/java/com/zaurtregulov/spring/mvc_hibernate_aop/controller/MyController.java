@@ -49,6 +49,13 @@ public class MyController {
         return "employee-info";
     }
 
+    @RequestMapping("/deleteEmployee")
+    public String deleteEmployee(@RequestParam("id")int id){
+        employeeService.deleteEmployee(id);
+
+        return "redirect:/";
+    }
+
     @Autowired
     public void setEmployeeDao(EmployeeService employeeService) {
         this.employeeService = employeeService;

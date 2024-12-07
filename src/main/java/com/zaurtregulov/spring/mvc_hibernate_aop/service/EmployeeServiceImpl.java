@@ -30,6 +30,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeDao.getEmployee(id);
     }
 
+    @Override
+    @Transactional
+    public void deleteEmployee(int id) {
+        employeeDao.deleteEmployee(id);
+    }
+
     @Autowired
     public void setEmployeeDao(EmployeeDao employeeDao) {
         this.employeeDao = employeeDao;
