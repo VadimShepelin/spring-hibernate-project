@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Run docker compose
-        uses: hoverkraft-tech/compose-action@v2.0.1
-        with:
-          compose-file: "docker-compose.yaml"
+      - name: Build and run Docker container
+        run: |
+          docker build -f Dockerfile -t my-app:latest .
+          docker run -d -p 8085:8080 my-app:latest
