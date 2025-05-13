@@ -2,6 +2,6 @@ services:
 
   tomcat:
     container_name: tomcat
-    image: tomcat_image
+    image: tomcat:latest
     ports:
       - 8085:8080
