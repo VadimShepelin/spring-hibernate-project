@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class MyLoggingAspect {
+public class  MyLoggingAspect {
 
     @Around("execution(* com.zaurtregulov.spring.mvc_hibernate_aop.dao.*.*(..))")
     public Object aroundAllRepositoryMethodsAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
