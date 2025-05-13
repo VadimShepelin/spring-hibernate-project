@@ -14,10 +14,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18.x' # Или другая нужная вам версия Node.js
-
       - name: Install dependencies
         run: npm ci
