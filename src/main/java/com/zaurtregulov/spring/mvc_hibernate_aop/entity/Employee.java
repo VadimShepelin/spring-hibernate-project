@@ -12,8 +12,6 @@ public class Employee {
     @Column(name = "id")
     private int id;
 
-    private String gey;
-
     @Column(name = "name")
     private String name;
 
