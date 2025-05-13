@@ -1,0 +1,7 @@
+services:
+
+  tomcat:
+    container_name: tomcat
+    image: tomcat_image
+    ports:
+      - 8085:8080
